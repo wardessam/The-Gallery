@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Gallery </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+</head>
+
+<body>
+
+    <header class="mui-appbar mui--z1">
+        <table width="100%">
+            <tr style="vertical-align:middle;">
+              <td class="mui--appbar-height">The Gallery</td>
+              <td class="mui--appbar-height">Home</td>
+              <td class="mui--appbar-height">Add an art</td>
+              <td class="mui--appbar-height">Edit an art</td>
+              <td class="mui--appbar-height">Show all orders</td>
+              <td class="mui--appbar-height">Logout</td>
+            </tr>
+          </table>
+      </header>
+    
+      
+
+    
+    <div class="mui-container">
+       
+           
+
+                <form class="mui-form" action="login.php" id="form" method="post">
+                   
+                    <div class="mui-textfield mui-textfield--float-label">
+                    <input type="email" id="email" name="email">
+                    <label>Email</label>
+                    </div>
+                      
+                      
+
+                    <div class="mui-textfield mui-textfield--float-label">
+                    <input type="password" id="password" name="password" >
+                    <label>Password</label>
+                    </div> 
+                     
+
+                    
+                        <button id="Login" class="mui-btn mui-btn--raised mui-btn--primary" type="submit" name="Login">
+                            Login
+                        </button>
+                    
+                        <div id="output">
+
+                        </div>
+                 
+                </form>
+        
+        </div>
+   
+
+        <footer>
+            <div class="mui-container mui--text-center">
+              The Gallery
+            </div>
+          </footer>
+
+    <script>
+            
+        $(document).ready(function(){
+            $("#form").submit(function(e){
+                
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "login.php",
+                    data:{
+                        email: $("#email").val(),
+                        password: $("#password").val()
+                        },
+                    dataType: "json",
+                    success: function(response){
+                        if (response == 1){
+                            $("#output").text("login successful");
+                            sessionStorage.setItem("email", $("#email").val() );
+                            sessionStorage.setItem("password", $("#password").val());
+                           // window.location="Home.php";
+                            
+                            
+                        }
+                        else if (response == 0){
+                            $("#output").text("login failed");
+                        }
+                    } 
+                    
+                
+                
+                })
+                    
+            });
+        });
+     </script>
+   
+
+</body>
+
+</html>
