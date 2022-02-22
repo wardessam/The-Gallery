@@ -13,23 +13,8 @@
 </head>
 
 <body>
-
-    <header class="mui-appbar mui--z1">
-        <table width="100%">
-            <tr style="vertical-align:middle;">
-              <td class="mui--appbar-height">The Gallery</td>
-              <td class="mui--appbar-height">Home</td>
-              <td class="mui--appbar-height">Add an art</td>
-              <td class="mui--appbar-height">Edit an art</td>
-              <td class="mui--appbar-height">Show all orders</td>
-              <td class="mui--appbar-height">Logout</td>
-            </tr>
-          </table>
-      </header>
-    
-      
-
-    
+    <div id="nav-placeholder">
+    </div> 
     <div class="mui-container">
        
            
@@ -70,7 +55,7 @@
           </footer>
 
     <script>
-            
+    
         $(document).ready(function(){
             $("#form").submit(function(e){
                 
@@ -88,7 +73,7 @@
                             $("#output").text("login successful");
                             sessionStorage.setItem("email", $("#email").val() );
                             sessionStorage.setItem("password", $("#password").val());
-                           // window.location="Home.php";
+                            window.location="home.php";
                             
                             
                         }
