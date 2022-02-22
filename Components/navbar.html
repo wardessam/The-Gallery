@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">
+            <img src="Images/logo.png" style="vertical-align:middle" width="90" height="70"/>
+            The Gallery
+        </div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+              <!-- NAVIGATION MENUS -->
+              <div class="menu">
+                <li><a href="/Php/home.php">Home</a></li>
+                <li><a href="/Components/add_art.html">Add an art</a></li>
+                <li><a href="/Php/edit_artHome.php">Edit an art</a></li>
+                <li><a href="/Php/orders.php">Show all orders</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+              </div>
+            </ul>
+          </nav>
+          <script>
+          $("#logout").click(function(e){
+             window.location="login.html";
+            sessionStorage.clear();
+           });
+          </script>
+    </body>
+</html>
