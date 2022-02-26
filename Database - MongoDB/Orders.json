@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "621a0f9064740000e600792d"
+  },
+  "OrderID": "6yfnu_pp",
+  "Status": "Delivered",
+  "CustomerInfo": {
+    "Email": "nada@gmail.com"
+  },
+  "PurchaseDate": "02/04/2022",
+  "TotalPrice": "1366",
+  "Discount": "10%"
+}]

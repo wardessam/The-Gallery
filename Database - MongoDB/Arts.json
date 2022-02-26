@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "6219f83864740000e6007923"
+  },
+  "ImgUrl": "starryNight.jpg",
+  "Name": "Starry Night",
+  "Price": "2000$",
+  "Stock Amount": "100",
+  "Artist": "Van Gosh",
+  "Description": "The Starry Night is an oil-on-canvas painting by the Dutch Post-Impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an imaginary village.It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. Widely regarded as Van Gogh's magnum opus,The Starry Night is one of the most recognized paintings in Western art",
+  "Discount": "10%"
+},{
+  "_id": {
+    "$oid": "6219fb4264740000e6007924"
+  },
+  "ImgUrl": "../Images/../Images/theTwoFridas.jpg",
+  "Name": "The Two Fridas",
+  "Price": "1552$",
+  "Stock Amount": "20",
+  "Artist": "Frida Kahlo",
+  "Description": "In this painting, the two Fridas are holding hands. They both have visible hearts and the heart of the traditional Frida is cut and torn open. The main artery, which comes from the torn heart down to the right hand of the traditional Frida, is cut off by the surgical pincers held in the lap of the traditional Frida. The blood keeps dripping on her white dress and she is in danger of bleeding to death. The stormy sky filled with agitated clouds may reflect Frida's inner turmoil.",
+  "Discount": "5%",
+  "StockAmount": "10"
+},{
+  "_id": {
+    "$oid": "6219fbb764740000e6007925"
+  },
+  "ImgUrl": "../Images/withouthope.jpg",
+  "Name": "Without Hope",
+  "Price": "1050$",
+  "Stock Amount": "15",
+  "Artist": "Frida Kahlo",
+  "Description": "In this painting, Frida Kahlo, depicts what she went through with the \"forced feeding\" diet. The disgusting food with animals and skulls was held by the wooden structure which used to hold her canvases for painting. It seems her arms are pinned underneath and cannot help with the situation. The background is a deserted Mexican landscape showing both the sun and the moon. The situation seems to be Without Hope.",
+  "Discount": "2%",
+  "StockAmount": "15"
+},{
+  "_id": {
+    "$oid": "6219fc6c64740000e6007926"
+  },
+  "ImgUrl": "blossom.jpeg",
+  "Name": "Blossoming Almond tree",
+  "Price": "2000$",
+  "Stock Amount": "300",
+  "Artist": "Van Gosh",
+  "Description": "Almond branches are a subject that Van Gogh visited a few times before. In earlier studies, he painted cut branches set in a vase – as a still life. In this picture, Blossoming Almond Tree, for his nephew, he paints a very different composition. Instead of visiting the still life again, he shows white almond tree branches against a blue sky. It is not shown whether these branches are cut from the tree and sitting in a vase outside of the view of the viewer or if they are still on the tree, seen from below looking up towards the sky. It is an unusual composition for both art as a whole and for Van Gogh himself.",
+  "Discount": "5%"
+},{
+  "_id": {
+    "$oid": "621a11c464740000e600792e"
+  },
+  "ImgUrl": "withouthope.jpg",
+  "Name": "New Hopes",
+  "Price": "100",
+  "Stock Amount": "20",
+  "Artist": "Frida Kahlo",
+  "Description": "Frida new's art",
+  "Discount": "5%"
+}]
