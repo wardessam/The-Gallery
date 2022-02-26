@@ -2,7 +2,7 @@
 require '../vendor/autoload.php';
 $mongoClient = (new MongoDB\Client);
 $db = $mongoClient->TheGallery;
-$collection = $db->StoreArts;
+$collection = $db->Arts;
 $returnAll = $collection->find();
 
 ?>
@@ -22,58 +22,63 @@ $returnAll = $collection->find();
 </head>
 
 <body>
+<div class="container">
 <div id="navLoad">
 </div>
         <div class="mui-container">
-                    <form class="mui-form" action="/Php/search_art.php" id="form" method="post" >
+        <div class="mui-container mui--text-center">
+            <h2>Search an Art</h2>
+        </div>
+                    <form class="mui-form" action="../Php/search_art.php" id="form" method="post" >
 
                     <div class="mui-textfield mui-textfield--float-label">
-                                <input type="text" id="product_name" name="product_name" placeholder=" ">
-                                <label for="product_name">Product name</label>
+                                <input type="text" id="name" name="name" >
+                                <label for="name">Art Name</label>
                     </div>     
 
            
-                    <button id="Login" class="mui-btn mui-btn--raised mui-btn--accent" type="submit" name="Login">
+                    <button  class="mui-btn mui-btn--raised mui-btn--accent" type="submit">
                            Search
                         </button>
                              
                     </form>
                
-                <table id="arts">
+                <table id="arts" class="mui-table mui-table--bordered">
+                <thead>
                     <tr>
                         <th>Art Image</th>
                         <th>Art Name</th>
                         <th>Art Price</th>
-                        <th>Art Amount Stock</th>
+                        <th>Art Stock Amount</th>
                         <th>Art Artist</th>
-                        <th>Art Rating</th>
                         <th>Art Discount</th>
                         <th>Art Description</th>
                     </tr>
-                   
+              </thead>
+              <tbody>
                     <?php
                     error_reporting(0);
                         foreach ( $returnAll as $id => $value )
                         {
                         echo "<tr>";
-                        echo "<td><img src='imgs/". $value['ImgUrl']."' width='100' height='100'></img></td>";
+                        echo "<td><img src='../Images/". $value['ImgUrl']."' width='100' height='100'></img></td>";
                          echo "<td>". $value['Name']."</td>";
                          echo "<td>". $value['Price']."</td>";
-                         echo "<td>". $value['StockAmount']."</td>";
+                         echo "<td>". $value['Stock Amount']."</td>";
                          echo "<td>". $value['Artist']."</td>";
-                         echo "<td>". $value['Rating']."</td>";
                          echo "<td>". $value['Discount']."</td>";
                          echo "<td>". $value['Description']."</td>";
                          echo "</tr>";
                         }
                     ?>
-                    
+                   </tbody> 
                     </table>
                    
              
                     
                     
               
+        </div>
         </div>
        <div id="footerLoad"></div>
 
@@ -91,21 +96,20 @@ $returnAll = $collection->find();
     $.ajax({
         method: 'POST',
         type: "POST",
-        url: "Php/search_art.php",
+        url: "../Php/search_art.php",
          data:{
-            ProductName: $("#art_name").val()
+            Name: $("#name").val()
             },
         dataType:'json',
         success: function(data){
             if (data){
                 $('td').remove();
-               $("#arts").append("<tr><td><img src='imgs/" 
+               $("#arts").append("<tr><td><img src='../Images/" 
                + data['ImgUrl'] + "' width='100' height='100'></img></td><td>"
                + data['Name'] + '</td><td>' 
                + data['Price'] + '</td><td>' 
-               + data['StockAmount'] +'</td><td>' 
+               + data['Stock Amount'] +'</td><td>' 
                + data['Artist'] + '</td><td>'
-               +data['Rating']+'</td><td>'
                +data['Discount']+'</td><td>'
                +data['Description']+'</td>'
                +'</tr>');

@@ -18,7 +18,7 @@
         <div class="mui-container mui--text-center">
             <h2>Add an Art</h2>
         </div>
-        <form id="form" action="/Php/add_art.php" method="post" enctype="multipart/form-data">
+        <form id="form" action="../Php/add_art.php" method="post" enctype="multipart/form-data">
             <div class="mui-textfield mui-textfield">
                 <input type="file" id="img" name="img" accept="image/*" onchange="loadFile()" required>
                 <label>Art Image</label>
@@ -73,7 +73,7 @@
 function loadFile() {
 var imgpath = $('#img').val();
 var path = imgpath.replace("C:\\fakepath\\", "");
-$('#outputimg').attr("src",'imgs/'+path);
+$('#outputimg').attr("src",'../Images/'+path);
 };
 $("#form").submit(function(e){
 var imgpath = $('#img').val();
@@ -82,25 +82,24 @@ var path = imgpath.replace("C:\\fakepath\\", "");
     $.ajax({
         method: 'POST',
         type: "POST",
-        url: "Php/add_art.php",
+        url: "../Php/add_art.php",
         dataType:'json',
 
         data:{
             Img:path,
-            Reference: $("#reference").val(),
-            Stock: $("#stock_amount").val(),
             ProductName: $("#product_name").val(),
-            Category: $("#category").val(),
-            Description: $("#description").val(),
             Price: $("#price").val(),
-            Tax: $("#tax").val(),
-            Discount: $("#discount").val()
+            Stock: $("#stock_amount").val(),
+            Artist: $("#artist").val(),
+            Discount: $("#discount").val(),
+            Description: $("#description").val(),
+           
             },
             
         success: function(response){
             if (response == 1){
-                alert("Product Added Successfully");
-                window.location="cms-view-products.php";
+                alert("Art Added Successfully");
+                window.location="/the-gallery/Php/home.php";
                 
             }
             else if (response == 0){
