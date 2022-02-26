@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div class="container">
     <div id="navLoad">
     </div>
     <div class="mui-container ">
@@ -58,6 +59,8 @@
                 Add Art
         </button>
         </form>
+    </div>
+</div>
 <div id="footerLoad"></div>    
 <script type="text/javascript" >
  $(function(){
@@ -65,7 +68,7 @@
       });
  $(function(){
        $("#navLoad").load("navbar.html");
-      }); 
+}); 
    
 function loadFile() {
 var imgpath = $('#img').val();
@@ -112,11 +115,6 @@ var path = imgpath.replace("C:\\fakepath\\", "");
 });
 
 </script>
-
-<script src="assets/articleProgresBar/java/script.js"></script>
-<script src="js/mobile-nav.js"></script>
-<script src="assets/imageSlider/java/script.js"></script>
-
 </body>
 
 </html>

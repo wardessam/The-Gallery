@@ -6,6 +6,7 @@
    }
    body {
     font-family: cursive;
+    height: 100%;
    }
    a {
     text-decoration: none;
@@ -13,14 +14,21 @@
    li {
     list-style: none;
    }
+.container{
+   display: block;  
+   min-height: 100%; 
+ 
+}
 #footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:20px;
-    text-align: center;
-    color:gray;
-    background-color: black;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 1000vw;
+  min-height: 3vh;
+
  }
    /* NAVBAR STYLING STARTS */
 .navbar {

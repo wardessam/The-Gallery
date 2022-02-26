@@ -14,6 +14,7 @@ $returnAll = $collection->find();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Gallery</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
       <!-- load MUI -->
       <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
@@ -79,10 +80,10 @@ $returnAll = $collection->find();
 
 <script>
      $(function(){
-       $("#footerLoad").load("Components/footer.html");
+       $("#footerLoad").load("../Components/footer.html");
       });
      $(function(){
-       $("#navLoad").load("Components/navbar.html");
+       $("#navLoad").load("../Components/navbar.html");
       }); 
    
     $("#form").submit(function(e){
